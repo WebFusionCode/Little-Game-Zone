@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 92vh;
+        background: url(pexels-stasknop-1298601.jpg) no-repeat center center/cover;
+
+    }
+
+    .gamebar {
+        display: block;
+        width: 25%;
+        padding: 0px;
+        margin: 0px;
+        height: 0px;
+        position: absolute;
+        top: 18%;
+        right: -17px;
+        background-color: #0000004b;
+        border-radius: 0px;
+
+    }
+
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        text-align: center;
+
+    }
+
+    .logo img {
+        width: 80px;
+        justify-content: center;
+        border-radius: 50px;
+        box-shadow: 5px 5px 15px grey;
+        transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        filter: invert(100%);
+    }
+
+    .logo div {
+        font-size: 20px;
+        font-weight: bold;
+        font-size: 23px;
+        border-radius: 25px;
+        transition: transform 0.4s;
+
+
+    }
+    .logo div:hover{
+        transform: scale(1.1);
+    }
+
+    .navigationbar {
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0);
+
+    }
+
+    .navigationbar li {
+        display: inline-block;
+        font-size: 25px;
+        margin: 0px;
+        padding: 15px;
+        display: flex;
+        justify-content: right;
+
+    }
+
+    .navigationbar li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.082);
+        border: 2px solid rgba(0, 0, 0, 0.164);
+        margin: 2px;
+        padding: 3px;
+        width: 190px;
+        display: flex;
+        justify-content: center;
+        border-radius: 25px 5px 5px 25px;
+        text-shadow: 2px 2px 5px rgba(34, 33, 33, 0.795);
+        box-shadow: 15px 5px 10px rgba(53, 53, 53, 0.541);
+        background: rgba(255, 255, 255, 0.1);
+        /* Slightly transparent background */
+        backdrop-filter: blur(10px);
+        /* Blur effect */
+        transition: 0.3s;
+
+    }
+
+    .navigationbar li a:hover {
+        transform: translate(-15px);
+
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        top: 13px;
+        display: flex;
+        height: 35px;
+        
+
+    }
+
+    .right input {
+        border-radius: 25px;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 2px solid rgb(163, 255, 250);
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px rgba(53, 53, 53, 0.541);
+        margin: 4px;
+        padding: 18px;
+        font-size: 17px;
+        transition: transform 0.3s;
+
+        
+    }
+    .right input:hover{
+        transform: scale(1.1);
+    }
+    
+    .right input:focus {
+        outline: none;
+        /* Removes the default focus border */
+        border-color: rgb(85, 145, 142);
+        ;
+        /* Optional: Change border color on focus */
+    }
+    .right button {
+
+        height: 41px;
+        justify-content: center;
+        border-radius: 100px;
+        border: 1px solid black;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 5px rgba(53, 53, 53, 0.541);
+        outline: none;
+        background-color:  rgba(0, 255, 255, 0.171);
+        border: 1px solid rgb(88, 158, 158);
+        margin: 3px;
+        padding: 10px;
+        transition: transform;
+
+    }
+    .right button:hover{
+        transform: scale(1.1);
+
+    }
+
+
+    .right button img {
+        height: 19px;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0);
+        
+    }
+    .para{
+        border: 2px solid black;
+        display: block;
+        position: absolute;
+        top: 150px;
+        width: 1000px;
+        padding: 10px;
+        margin: 10px ;
+        backdrop-filter: blur(5px);
+        box-shadow: 5px 5px 5px black;
+        transition: transform 0.3s;
+        border-radius: 20px;
+        text-shadow: 0px 0px 5px black;
+        
+
+    }
+    .para:hover{
+        cursor: pointer;
+        transform: matrix(1.05, 0, 0, 1.05, 10, 0);
+        background-color: rgba(255, 255, 255, 0.24);
+        color: rgb(0, 0, 0);
+        border: 3px solid black;
+    }
+    .para1{
+        border: 2px solid black;
+        display: block;
+        position: absolute;
+        top: 350px;
+        width: 1000px;
+        padding: 10px;
+        margin: 10px;
+        backdrop-filter: blur(10px);        
+        box-shadow: 5px 5px 5px black;
+        transition: transform 0.3s;
+        border-radius: 20px;
+        text-shadow: 0px 0px 5px black;
+    }
+    .para1:hover{
+        cursor: pointer;
+        transform: matrix(1.05, 0, 0, 1.05, 10, 0);
+        background-color: rgba(255, 255, 255, 0.24);
+        color: rgb(0, 0, 0);
+        border: 3px solid black;
+    }
+    span{
+        color: white    
+    }
+
+  
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="imm" src="FUSION.jpg" alt="WebFusion">
+            <div>Web Fusion</div>
+        </div>
+
+        <div class="gamebar">
+            <ul class="navigationbar">
+                <li><a href="index.html">Home Mode</a></li>
+                <li><a href="gameshub.html">Games Hub</a></li>
+                <li><a href="#">Web Games Rules</a></li>
+                <li><a href="#">Contact Mode</a></li>
+                <li><a href="#">About Mode</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <input type="search" name="Search" placeholder="Search...">
+            <button>
+                <img src="search.jpg.png" alt="search icon">
+            </button>
+        </div>
+    </header>
+    <div class="para">
+        <p>Online web games encompass a wide variety of genres <span>and styles, each designed to cater to different interests and preferences. These games can be</span> broadly categorized into several types, including strategy games, <span>role-playing games (RPGs), simulation games, puzzle games, and action games. Strategy g</span>ames like "Clash of Clans" and "Age of Empires" challenge <span>players to think critically and plan their moves to achieve victory. Role-playing games such as</span> "World of Warcraft" and "Final Fantasy" immerse play <span>ers in elaborate storylines and character development. Simulation games like "The Sims" and</span> "SimCity" allow players to create and manage virtual <span>worlds, offering a blend of creativity and management skills. Puzzle games, including "Candy C</span>rush" and "Tetris," provide mental stimulation and problem- <span>solving challenges, while action games like "Fortnite" and "Call of Duty" offer fast-paced,</span> adrenaline-pumping experiences.</p>
+    </div>
+        <div class="para1">
+        <p>The purpose of creating a webpage dedicated to <span>online web games is to provide a comprehensive platform where gamers can discover new games, access</span> reviews, and find community forums to discuss <span>strategies and share experiences. Additionally, this webpage can serve as a resource for developers to</span> showcase their latest projects, gather feedback, <span>and engage with their audience. By curating a diverse selection of games and offering insightful content, the</span> webpage aims to enhance the gaming experience <span>for both casual and hardcore gamers alike.</span></p>
+    </div>
+        
+    
+
+
+</body>
+
+</html>

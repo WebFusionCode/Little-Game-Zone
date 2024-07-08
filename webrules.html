@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 92vh;
+        background: url(pexels-pixabay-275033.jpg) no-repeat center center/cover;
+
+    }
+
+    .gamebar {
+        display: block;
+        width: 25%;
+        padding: 0px;
+        margin: 0px;
+        height: 0px;
+        position: absolute;
+        top: 18%;
+        right: -17px;
+        background-color: #0000004b;
+        border-radius: 0px;
+
+    }
+
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        text-align: center;
+
+    }
+
+    .logo img {
+        width: 80px;
+        justify-content: center;
+        border-radius: 50px;
+        box-shadow: 5px 5px 15px grey;
+        transition: transform 0.3s;
+        filter: invert(100%);
+    }
+
+    .logo img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        filter: invert(100%);
+    }
+
+    .logo div {
+        font-size: 20px;
+        font-weight: bold;
+        font-size: 23px;
+        border-radius: 25px;
+        transition: transform 0.4s;
+        color: white;
+
+
+    }
+
+    .logo div:hover {
+        transform: scale(1.1);
+    }
+
+    .navigationbar {
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0);
+
+    }
+
+    .navigationbar li {
+        display: inline-block;
+        font-size: 25px;
+        margin: 0px;
+        padding: 15px;
+        display: flex;
+        justify-content: right;
+
+    }
+
+    .navigationbar li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.37);
+        border: 2px solid rgba(0, 0, 0, 0.164);
+        margin: 2px;
+        padding: 3px;
+        width: 190px;
+        display: flex;
+        justify-content: center;
+        border-radius: 25px 5px 5px 25px;
+        text-shadow: 2px 2px 5px rgba(34, 33, 33, 0.795);
+        box-shadow: 15px 5px 10px rgba(53, 53, 53, 0.541);
+        background: rgba(0, 0, 0, 0.486);
+        /* Slightly transparent background */
+        backdrop-filter: blur(10px);
+        /* Blur effect */
+        transition: 0.3s;
+
+    }
+
+    .navigationbar li a:hover {
+        transform: translate(-15px);
+
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        top: 13px;
+        display: flex;
+        height: 35px;
+
+
+    }
+
+    .right input {
+        border-radius: 25px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 2px solid rgb(255, 255, 255);
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px rgba(53, 53, 53, 0.541);
+        margin: 4px;
+        padding: 18px;
+        font-size: 17px;
+        transition: transform 0.3s;
+    }
+
+    .right input::placeholder {
+        color: black;
+    }
+
+    .right input:hover {
+        transform: scale(1.1);
+    }
+
+    .right input:focus {
+        outline: none;
+        /* Removes the default focus border */
+        border-color: rgb(255, 255, 255);
+        ;
+        /* Optional: Change border color on focus */
+    }
+
+    .right button {
+
+        height: 41px;
+        justify-content: center;
+        border-radius: 100px;
+        border: 1px solid black;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 5px rgba(53, 53, 53, 0.541);
+        outline: none;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 255, 255);
+        margin: 3px;
+        padding: 10px;
+        transition: transform;
+
+    }
+
+    .right button:hover {
+        transform: scale(1.1);
+
+    }
+
+
+    .right button img {
+        height: 19px;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+
+    .para {
+        border: 2px solid black;
+        display: block;
+        position: absolute;
+        top: 150px;
+        width: 1000px;
+        padding: 10px;
+        margin: 10px;
+        backdrop-filter: blur(5px);
+        box-shadow: 5px 5px 5px black;
+        transition: transform 0.3s;
+        border-radius: 20px;
+        text-shadow: 0px 0px 5px black;
+
+
+    }
+
+    .para:hover {
+        cursor: pointer;
+        transform: matrix(1.05, 0, 0, 1.05, 10, 0);
+        background-color: rgba(255, 255, 255, 0.24);
+        color: rgb(0, 0, 0);
+        border: 3px solid black;
+    }
+
+    .para1 {
+        border: 2px solid black;
+        display: block;
+        position: absolute;
+        top: 350px;
+        width: 1000px;
+        padding: 10px;
+        margin: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 5px black;
+        transition: transform 0.3s;
+        border-radius: 20px;
+        text-shadow: 0px 0px 5px black;
+    }
+
+    .para1:hover {
+        cursor: pointer;
+        transform: matrix(1.05, 0, 0, 1.05, 10, 0);
+        background-color: rgba(255, 255, 255, 0.24);
+        color: rgb(0, 0, 0);
+        border: 3px solid black;
+    }
+
+    .p11 {
+        border: 2px solid rgb(0, 0, 0);
+        width: 300px;
+        height: 150px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        top: 150px;
+        backdrop-filter: blur(5px);
+        background: rgba(255, 255, 255, 0.411);
+        color: rgb(0, 0, 0);
+        left: 100px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 20px;
+        border-style: inset;
+
+    }
+
+    .p12 {
+        border: 2px solid rgb(0, 0, 0);
+        width: 300px;
+        max-height: 500px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        top: 220px;
+        backdrop-filter: blur(5px);
+        background: rgba(255, 255, 255, 0.411);
+        color: rgb(0, 0, 0);
+        left: 301px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 20px;
+        border-style: inset;
+    }
+
+    .p13 {
+        border: 2px solid rgb(0, 0, 0);
+        width: 300px;
+        max-height: 500px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        top: -116px;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.411);
+        color: rgb(255, 255, 255);
+        left: 700px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 20px;
+        border-style: inset;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="imm" src="FUSION.jpg" alt="WebFusion">
+            <div>Web Fusion</div>
+        </div>
+
+        <div class="gamebar">
+            <ul class="navigationbar">
+                <li><a href="index.html">Home Mode</a></li>
+                <li><a href="gameshub.html">Games Hub</a></li>
+                <li><a href="webrules.html">Web Games Rules</a></li>
+                <li><a href="#">Contact Mode</a></li>
+                <li><a href="#">About Mode</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <input type="search" name="Search" placeholder="Search...">
+            <button>
+                <img src="search.jpg.png" alt="search icon">
+            </button>
+        </div>
+    </header>
+    <div>
+        <p class="p11">
+            When engaging in web games, it is crucial to adhere to a set of guidelines to ensure a fair, enjoyable, and
+            safe
+            gaming experience for everyone involved. First and foremost, players should respect the rules and guidelines
+            set
+            by each specific game, including those related to gameplay, conduct, and any terms of service.
+        </p>
+        <p class="p12">
+            Cheating,
+            hacking, or exploiting glitches is strictly prohibited as it undermines the integrity of the game and can
+            lead
+            to penalties or bans. Additionally, maintaining good sportsmanship is essential; players should treat others
+            with respect, avoid offensive language, and refrain from harassing or bullying fellow gamers. Personal
+            information should never be shared with strangers to protect one's privacy and security.
+        </p>
+        <p class="p13">
+            It is also
+            important to
+            be mindful of the time spent gaming to avoid negative impacts on health and daily responsibilities. Finally,
+            players should stay informed about updates and changes to game rules, as developers may introduce new
+            policies
+            to improve the gaming environment. By following these rules, gamers contribute to a positive community where
+            everyone can enjoy the thrill and fun of web-based games.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
